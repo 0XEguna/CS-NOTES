@@ -32,19 +32,19 @@ __Which of the following is a potential problem that Brielle should consider?__
 
 Evaluating this model doesn't need to be complicated. Assuming that Brielle uses a Supervised Learning approach, she will have several options to assess the quality of the model predictions. Therefore, the first choice is incorrect.
 
-[Survivorship bias]("https://en.wikipedia.org/wiki/Survivorship_bias") is when we concentrate on samples that made it past a selection process and ignore those that did not. Nothing in the problem statement indicates that Brielle's model will suffer from this problem.
+[Survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias) is when we concentrate on samples that made it past a selection process and ignore those that did not. Nothing in the problem statement indicates that Brielle's model will suffer from this problem.
 
-[Decline bias]("https://en.wikipedia.org/wiki/Declinism") refers to the tendency to compare the past to the present, leading to the assumption that things are worse or becoming worse simply because change is occurring. The third choice is not a correct answer either.
+[Decline bias](https://en.wikipedia.org/wiki/Declinism) refers to the tendency to compare the past to the present, leading to the assumption that things are worse or becoming worse simply because change is occurring. The third choice is not a correct answer either.
 
-Finally, this model may create a [positive feedback loop]("https://en.wikipedia.org/wiki/Positive_feedback"). The more you patrol a neighborhood, the more traffic violations you'll find. Communities with no police force will never report any violations, while heavily patrolled communities will have the lion's share of transgressions.
+Finally, this model may create a [positive feedback loop](https://en.wikipedia.org/wiki/Positive_feedback). The more you patrol a neighborhood, the more traffic violations you'll find. Communities with no police force will never report any violations, while heavily patrolled communities will have the lion's share of transgressions.
 
 The model will use that data and make the problem worse: it will predict that new violations will happen in already problematic areas, sending more police to those communities at the expense of areas with lower reports. A few rounds of this, and you'll have most reports from a few places while violations are rampant everywhere.
 
 ### Recommended reading:
 
-Check the description of a ["Positive Feedback Loop"]("https://en.wikipedia.org/wiki/Positive_feedback") in Wikipedia.
+Check the description of a ["Positive Feedback Loop"](https://en.wikipedia.org/wiki/Positive_feedback) in Wikipedia.
 
-["How Positive Feedback Loops Are Hurting AI Applications"]("https://levelup.gitconnected.com/how-positive-feedback-loops-are-hurting-ai-applications-6eae0304521c") is an excellent article explaining the dangers of positive feedback loops in machine learning.
+["How Positive Feedback Loops Are Hurting AI Applications"](https://levelup.gitconnected.com/how-positive-feedback-loops-are-hurting-ai-applications-6eae0304521c) is an excellent article explaining the dangers of positive feedback loops in machine learning.
 
 ### Wednesday, September 18th 2024
 
@@ -125,9 +125,9 @@ Finally, the fully-connected layer has 1,600 parameters. To compute this, we nee
 Notice that the above values differ from the number of learnable parameters of each layer, but they are essential to understanding the size of the input to the fully-connected layer.
 Recommended reading
 
-Check ["Understanding and Calculating the number of Parameters in Convolution Neural Networks (CNNs)"]("https://towardsdatascience.com/understanding-and-calculating-the-number-of-parameters-in-convolution-neural-networks-cnns-fc88790d530d) for instructions on how to compute the number of learnable parameters.
+Check ["Understanding and Calculating the number of Parameters in Convolution Neural Networks (CNNs)"](https://towardsdatascience.com/understanding-and-calculating-the-number-of-parameters-in-convolution-neural-networks-cnns-fc88790d530d) for instructions on how to compute the number of learnable parameters.
 
-["Simple MNIST convnet"]("https://keras.io/examples/vision/mnist_convnet/) is a Keras example showing this particular code fragment.
+["Simple MNIST convnet"](https://keras.io/examples/vision/mnist_convnet/) is a Keras example showing this particular code fragment.
 
 ### Thurdats, September 19th 2024
 
@@ -164,7 +164,7 @@ __Which of the following statements about data augmentation are true?__
 
 One significant advantage of data augmentation is its ability to make a model resilient to variations in the data. For example, assuming we are working with images, we can use data augmentation to generate synthetic copies of each picture and help the model learn features regardless of where and how they appear.
 
-A few popular augmentation techniques when working with images are small rotations, horizontal and vertical flipping, turning the picture to grayscale, or cropping the image at different scales. The [following example]("https://www.v7labs.com/blog/data-augmentation-guide") shows four versions of an image generated by changing the original picture's brightness, contrast, saturation, and hue:
+A few popular augmentation techniques when working with images are small rotations, horizontal and vertical flipping, turning the picture to grayscale, or cropping the image at different scales. The [following example](https://www.v7labs.com/blog/data-augmentation-guide) shows four versions of an image generated by changing the original picture's brightness, contrast, saturation, and hue:
 
 <img src="images/augmenting_the_dataset.png">
 
@@ -176,6 +176,6 @@ Using data augmentation, Esther can reduce overfitting and help her model perfor
 
 ### Recommended reading:
 
-["The Essential Guide to Data Augmentation in Deep Learning"]("https://www.v7labs.com/blog/data-augmentation-guide") is an excellent article discussing data augmentation in detail.
+["The Essential Guide to Data Augmentation in Deep Learning"](https://www.v7labs.com/blog/data-augmentation-guide) is an excellent article discussing data augmentation in detail.
 
-Check ["Test-Time augmentation"]("https://articles.bnomial.com/test-time-augmentation") for an introduction that will help you make better predictions with your machine learning model.
+Check ["Test-Time augmentation"](https://articles.bnomial.com/test-time-augmentation) for an introduction that will help you make better predictions with your machine learning model.
