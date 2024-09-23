@@ -46,7 +46,7 @@ Check the description of a ["Positive Feedback Loop"](https://en.wikipedia.org/w
 
 ["How Positive Feedback Loops Are Hurting AI Applications"](https://levelup.gitconnected.com/how-positive-feedback-loops-are-hurting-ai-applications-6eae0304521c) is an excellent article explaining the dangers of positive feedback loops in machine learning.
 
-### Wednesday, September 18th 2024
+## Wednesday, September 18th 2024
 
 ### Question:
 __Arianna is trying to learn how Convolutional Neural Networks work, so she decided to copy an online Keras example to start from somewhere.__
@@ -129,7 +129,7 @@ Check ["Understanding and Calculating the number of Parameters in Convolution Ne
 
 ["Simple MNIST convnet"](https://keras.io/examples/vision/mnist_convnet/) is a Keras example showing this particular code fragment.
 
-### Thurdats, September 19th 2024
+## Thursday, September 19th 2024
 
 ### Question:
 
@@ -179,3 +179,232 @@ Using data augmentation, Esther can reduce overfitting and help her model perfor
 ["The Essential Guide to Data Augmentation in Deep Learning"](https://www.v7labs.com/blog/data-augmentation-guide) is an excellent article discussing data augmentation in detail.
 
 Check ["Test-Time augmentation"](https://articles.bnomial.com/test-time-augmentation) for an introduction that will help you make better predictions with your machine learning model.
+
+## Friday, September 20th 2024
+
+### Question:
+
+__Serena has been given an intriguing project at her workplace. She has to design an object detection model that identifies different types of fruits in images taken from a grocery store.__
+
+__Her goal is to create a model that can be easily modified and used for other similar tasks in the future.__
+__To ensure that her model performs at its best, Serena needs a method to evaluate it effectively. This evaluation method should allow her to compare and choose the best among different versions of the model.__
+
+__Which evaluation metrics should Serena use to evaluate her model?__
+
+### Possible Asnwers:
+
+* F1 score
+
+<details> <summary>Answer</summary><span style="color:green">CORRECT</span></details>
+
+* Mean Average Precision (mAP)
+
+<details> <summary>Answer</summary><span style="color:green">CORRECT</span></details>
+
+* Precision-Recall Curve
+
+<details> <summary>Answer</summary><span style="color:green">CORRECT</span></details>
+
+* ROC Curve
+
+<details> <summary>Answer</summary><span style="color:red">INCORRECT</span></details>
+
+### Explanation:
+
+The recall is useful for object detection, but it can't provide the full picture unless combined with Precision. High recall and low precision could lead to a model that is not useful. Therefore, Serena cannot rely solely on Recall as her key evaluation metric.
+
+[ROC Curves](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc?hl=es-419) are not typically used for object detection tasks,
+as there's no real concept of True Negatives, which are required to compute the False Positive Rate, one of the axes of the ROC curve. In object detection tasks, the number of bounding boxes that do not contain an object of interest is generally too large to handle effectively.
+
+Instead, Serena could compute a [Precision-Recall Curve](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html). This curve is similar to the ROC curve but uses the model's precision instead of False Positive Rate, thereby avoiding the problem of True Negatives.
+
+[Mean Average Precision (mAP)](https://medium.com/@timothycarlen/understanding-the-map-evaluation-metric-for-object-detection-a07fe6962cf3) is commonly used in object detection tasks to evaluate the overall performance of a model across all classes. It considers precision and recall and averages them over different Intersection over Union (IoU) thresholds, providing a single scalar value that Serena can use to compare different models.
+
+Lastly, the [F1-score](https://en.wikipedia.org/wiki/F-score) is a good choice, as it considers both the precision and recall of the model, offering a balanced view of the model's performance.
+
+### Recommended reading:
+
+Check ["Classification: ROC Curve and AUC"](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc?hl=es-419) for an explanation of how to create and interpret a ROC curve. 
+
+For more information about Precision-Recall curves, check [Scikit-Learn's documentation](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html).
+
+## Saturday, September 21st 2024
+
+### Question:
+
+__Katherine wants to use an ensemble model to process her dataset.  There's only one question for her to answer: Should she use bagging or boosting?__ 
+
+__Both techniques have different advantages and disadvantages, and Katherina wants to ensure she evaluates them correctly before committing to one solution.__
+
+__Both techniques have different advantages and disadvantages, and Katherina wants to ensure she evaluates them correctly before committing to one solution.__
+
+__Which of the following statements are true about bagging and boosting?__
+
+### Possible Answers:
+
+* Bagging trains individual models sequentially, using the
+results from the previous model to inform the selection of
+training samples.
+
+<details> <summary>Answer</summary><span style="color:red">INCORRECT</span></details>
+
+* Boosting trains individual models sequentially, using the
+results from the previous model to inform the selection of
+training samples.
+
+<details> <summary>Answer</summary><span style="color:green">CORRECT</span></details>
+
+
+* Bagging trains a group of models, each using a subset of
+data selected randomly with replacement from the original
+dataset.
+
+<details> <summary>Answer</summary><span style="color:green">CORRECT</span></details>
+
+* Each model receives equal weight in bagging to compute the
+final prediction, while boosting uses some way of weighing
+each model.
+
+<details> <summary>Answer</summary><span style="color:green">CORRECT</span></details>
+
+### Explanation:
+
+Ensembling is where we combine a group of models to produce a
+new model that yields better results than any initial
+individual models. Bagging and boosting are two popular
+ensemble techniques.
+
+Bagging trains a group of models in parallel and independently
+from each other. Each model uses a subset of the data randomly
+selected with replacement from the original dataset. In
+contrast, Boosting trains a group of learners sequentially,
+using the results from each model to inform which samples to
+use to train the next model.
+
+This summary helps us conclude that the first choice is
+incorrect, but the second and third choices are correct.
+
+Finally, when computing the final prediction, bagging averages
+out the results of each model. Boosting, however, weights each
+model depending on its performance. Therefore, the fourth
+choice is also correct.
+
+### Recommended reading:
+
+Check [Bagging vs. Boosting in Machine Learning: Difference
+Between Bagging and Boosting](https://www.upgrad.com/blog/bagging-vs-boosting/) for a detailed comparison
+between both techniques.
+
+[What is the difference between Bagging and Boosting?](https://quantdare.com/what-is-the-difference-between-bagging-and-boosting/) is
+another great summary of both techniques and their
+advantages and disadvantages.
+
+## Sunday, 22nd September 2024
+
+### Question:
+
+__Sienna realized she needed more than convolutional layers to process her image dataset.__
+
+__After stacking a few convolutional layers, her model started to make progress. Unfortunately, only very similar images returned positive results. Sienna discovered that her model lacked translation invariance: it was paying too much attention to the precise location of every feature.__
+
+__Fortunately, Sienna found out that she could use pooling layers.__
+
+__Which of the following statements about pooling layers are correct?__
+
+### Possible Answers:
+
+* During the training process, the network will learn the best configuration for the pooling layer.
+
+<details> <summary>Answer</summary><span style="color:grey">N/A</span></details>
+
+* A pooling layer with a stride of 2 will cut the number of
+feature maps from the previous convolutional layer in
+half.
+
+<details> <summary>Answer</summary><span style="color:red">INCORRECT</span></details>
+
+* Pooling layers create the same number of pooled feature
+maps.
+
+<details> <summary>Answer</summary><span style="color:green">CORRECT</span></details>
+
+
+* Average pooling and max pooling are two of the most common
+pooling operations.
+
+<details> <summary>Answer</summary><span style="color:green">CORRECT</span></details>
+
+### Explanation:
+
+Pooling layers don't have any learnable parameters. When
+designing the model, Sienna must specify the pooling operation
+and configuration she wants to use.
+
+Pooling layers work on each feature map independently and,
+depending on the pool size and stride, downsample these feature
+maps. The result is always a new set of pooled feature maps.
+Therefore, the second choice is incorrect, but the third is
+correct.
+
+Finally, Max Pooling and Average Pooling are the two most
+common pooling operations. Average Pooling computes the average
+value of each patch, while Max Pooling calculates the maximum
+value.
+
+### Recommended reading:
+
+["Max Pooling in Convolutional Neural Network and Its
+Features"](https://analyticsindiamag.com/ai-mysteries/max-pooling-in-convolutional-neural-network-and-its-features/) is a great introduction to Max Pooling.
+
+Check ["A Gentle Introduction to Pooling Layers for
+Convolutional Neural Networks"](https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/) for more information about
+how pooling layers work.
+
+## Monday, 23rd September 2024
+
+### Question:
+
+__Juniper learned that designing a neural network architecture for a supervised classification problem wasn't hard.__
+
+__Although most of it needed experimentation, one thing Juniper could count on was the design of the output layer of the network.__
+
+__Which of the following is a correct statement about the neurons in the output layer of a classification network?__
+
+### Possible Answers:
+
+* The number of neurons in the output layer should always match the number of classes.
+
+<details> <summary>Answer</summary><span style="color:grey">N/A</span></details>
+
+* The number of neurons in the output layer doesn't necessarily need to match the number of classes.
+
+<details> <summary>Answer</summary><span style="color:green">CORRECT</span></details>
+
+* The number of neurons in the output layer should always be greater than one.
+
+<details> <summary>Answer</summary><span style="color:red">INCORRECT</span></details>
+
+
+* The number of neurons in the output layer should always be a multiple of 2.
+
+<details> <summary>Answer</summary><span style="color:grey">N/A</span></details>
+
+
+### Explanation:
+
+When working on a multi-class classification problem, setting the output layer to the same number of classes we are interested in predicting is common. But what happens when we are working on a binary classification problem?
+
+A network to solve a binary classification problem doesn't need an output with two neurons. Instead, we can use a single neuron to determine the class by deciding on a cutoff threshold. For example, the result could be positive if the output exceeds 0.5 and negative otherwise.
+
+That means we can solve a problem requiring two classes with a single neuron.
+
+We can stretch the same idea to multi-class classification problems: We could interpret the output layer as a binary result, allowing us to represent multiple classes with fewer neurons. For example, we would need only two neurons to classify instances into four different categories (00, 01, 10, 11.) This approach, although not popular, it's possible.
+
+Therefore, the second choice is the correct answer to this question.
+
+### Recommended Reading:
+
+
+["But what is a neural network?"](https://www.youtube.com/watch?v=aircAruvnKk) is Grant Sanderson's introduction to neural networks on YouTube. Highly recommended!
+
+[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) is a free online book written by [Michael Nielsen](https://x.com/michael_nielsen).
