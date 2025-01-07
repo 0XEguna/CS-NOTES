@@ -1,6 +1,6 @@
 ## Namespaces
 
-### 2025eko urriaren 7an
+### 2025eko urtarrilaren 7an
 
 A namespace provides a solution for preventing name conflicts in large projects.
 
